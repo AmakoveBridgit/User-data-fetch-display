@@ -21,8 +21,13 @@ https://aquamarine-kitten-298e67.netlify.app
 
 Alternative of running the application
 git clone the github link on the local machine
+
+https://github.com/AmakoveBridgit/User-data-fetch-display.git
+
  Navigate into the project directory and cd into the repository
+ cd User-data-fetch-dispay
 install dependencies by running npm install  
+
 Then run npm  start to start the development server
 
 
