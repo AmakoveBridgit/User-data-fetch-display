@@ -123,7 +123,7 @@ function UserList() {
     setEditedUser(user);
 
 
-    
+
   };
 
   const handleUpdate = async (userId, updatedUserData) => {
