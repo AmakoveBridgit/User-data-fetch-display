@@ -61,6 +61,21 @@ function UserList() {
 
   const handleSubmit = async event => {
     event.preventDefault();
+    setUsers((prevUsers)=>[newUser,...prevUsers]);
+    setNewUser({
+      name: '',
+      username: '',
+      email: '',
+      phone: '',
+      company: {
+        name: '',
+      },
+      address: {
+        street: '',
+      },
+    });
+
+  
 
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/users',{
@@ -106,6 +121,9 @@ function UserList() {
 
   const handleEdit = user => {
     setEditedUser(user);
+
+
+    
   };
 
   const handleUpdate = async (userId, updatedUserData) => {
@@ -137,7 +155,7 @@ function UserList() {
     
 
     <div className='main'>
-<h1 className='user'>Add a new User</h1>
+<h2 className='user'>Add a new user</h2>
       <form onSubmit={handleSubmit} className='form'>
         <input className='input'
           type="text"
@@ -197,14 +215,14 @@ function UserList() {
           onChange={handleInputChange}
           
         />
-             <button className='btn' type="submit">Add User</button>
+             <button className='btn' type="submit">Add user</button>
 
         
 
       </form>
   
 
-      <h1 className='user'>All Users</h1>
+      <h2 className='user'>All users</h2>
  
 
       <ul>
@@ -216,30 +234,31 @@ function UserList() {
         users.map(user => (
           <div className='users'>
             <li >
+              <img src='./image/avatar.png'/>
           <h4>Name:</h4>  
             <p> {user.name}</p>
-            <br/>
+            {/* <br/> */}
               
               <h4>UserName:</h4>
               <p> {user.username}</p>
-              <br/>
+              {/* <br/> */}
               
               <h4>Email:</h4>
               <p>{user.email}</p>
 
-              <br/>
+              
 
               <h4>PhoneNumber:</h4>
               <p> {user.phone}</p>
 
-              <br/>
+              
               <h4> Company name: </h4>
               <p>{user.company.name}</p>
-              <br/>
+              {/* <br/> */}
               <h4>Street:</h4>
             <p>{user.address.street}</p>
             
-            <button onClick={() => handleDelete(user.id)}>Delete</button>   <Link to={`/EditUserPage/${user.id}`}> <button onClick={() => handleEdit(user)}>Edit</button> </Link>
+            <button className='delete' onClick={() => handleDelete(user.id)}>Delete</button>   <Link to={`/EditUserPage/${user.id}`}> <button onClick={() => handleEdit(user)}>Edit</button> </Link>
             </li>
 
             

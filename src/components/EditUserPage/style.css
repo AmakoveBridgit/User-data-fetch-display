@@ -1,18 +1,20 @@
 
 .Edit {
-    background-color: #f8d7bb;
-    padding: 20px;
+    background-color: rgb(223, 207, 187);
+    padding: 10px;
     border-radius: 10px;
     max-width: 500px;
+    text-align: center;
     margin: 50px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   
   }
   
   .Edit label {
-    display: block;
+    /* display: block; */
     margin-bottom: 10px;
     padding: 20px;
+    display: block;
     
   }
   
@@ -23,15 +25,15 @@
   }
   
   .Edit .input {
-    width: 80%;
+    width: 30%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #e7d8ed;
     border-radius: 5px;
 
   }
   
   .Edit button.save {
-    background-color: #a09f97;
+    background-color: #171716;
     color: #fff;
     border: none;
     padding: 10px 20px;
