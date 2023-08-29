@@ -16,8 +16,8 @@ Updating User Information: Edit buttons next to each user entry open a modal or 
 
 
 Here is the hosted link to my project
+https://user-data-fetch-display.vercel.app/
 
-https://aquamarine-kitten-298e67.netlify.app
 
 Alternative of running the application
 git clone the github link on the local machine
